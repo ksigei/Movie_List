@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 10vh;
+  width: 100vw;
+  border-bottom: 1px solid #000;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 10vw;
+}
+
+header ul li {
+  font-size: 20px;
+}
