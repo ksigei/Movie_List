@@ -1,5 +1,5 @@
-import fetchShow from '../src/apiCall.js';
-import showPopup from './comment.js';
+import { fetchShow } from '../src/apiCall.js';
+import { showPopup, addNewComment } from './comment.js';
 
 const displayPopup = () => {
   const commentBtn = document.querySelectorAll('.fa-comment');
@@ -10,7 +10,15 @@ const displayPopup = () => {
       showPopup(result);
     });
   });
+  addNewComment();
 };
 // close func
+const closePopup = () => {
+  const modalContainer = document.querySelector('.modalContainer');
+  const closeButton = document.querySelector('.close-btn');
+  closeButton.addEventListener('click', () => {
+    modalContainer.style.display = 'none';
+  });
+};
 
-export default displayPopup;
+export { displayPopup, closePopup };
