@@ -21,7 +21,7 @@ header {
 header ul {
   list-style: none;
   display: flex;
-  /* gap: 10vw; */
+  gap: 10vw; 
 }
 
 header ul li {
@@ -29,10 +29,10 @@ header ul li {
 }
 
 .movie_list {
-  /* margin: 1%;
+  margin: 1%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2px; */
+  gap: 2px; 
    display: grid; 
   grid-template-columns: repeat(3, 1fr);
    
@@ -42,18 +42,18 @@ header ul li {
 }
 
  .movie {
-  /* width: 30vw;
-  height: 40vh; */
+  width: 30vw;
+  height: 40vh; 
 }
 
 .movie img {
-  /* height: 25vh;
-  width: 20vw; */
+  height: 25vh;
+  width: 20vw;
 }
 
 .counter {
-  /* display: flex;
-  gap: 10vw; */
+   display: flex;
+  gap: 10vw; 
 }
 
 .fa-thumbs-up,
