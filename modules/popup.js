@@ -1,4 +1,4 @@
-import { fetchShows } from '../src/apiCall.js';
+import fetchShow from '../src/apiCall.js';
 import showPopup from './comment.js';
 
 const displayPopup = () => {
@@ -6,10 +6,11 @@ const displayPopup = () => {
   commentBtn.forEach((btn) => {
     btn.addEventListener('click', async () => {
       const { id } = btn.parentElement.previousElementSibling;
-      const result = await fetchShows(id);
+      const result = await fetchShow(id);
       showPopup(result);
     });
   });
 };
+// close func
 
 export default displayPopup;

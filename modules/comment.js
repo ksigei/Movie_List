@@ -3,6 +3,7 @@ const showPopup = async (data) => {
   const movieImage = data.image.medium;
   const movieSummary = data.summary;
   const commentPopup = document.querySelector('#popup');
+  commentPopup.style.display = 'block';
   commentPopup.classList.add('comment-popup');
   commentPopup.innerHTML = `<div class="shows">
                               <button type="button" class="close-btn clickable">&times;</button>

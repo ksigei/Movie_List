@@ -15,12 +15,12 @@ window.onload = function () {
       if (e.show.image !== null) {
         allMovies.innerHTML = `
         <div>
-        <img src="${e.show.image.original}" alt="Movie">
-        <p>Title: ${e.show.name}</p>
-        <div class="counter">
-            <div class="likes" id="${e.show.id}"><i class="fa fa-thumbs-up" aria-hidden="true"></i> </div>
-            <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-        </div>
+          <img src="${e.show.image.original}" alt="Movie">
+          <p>Title: ${e.show.name}</p>
+          <div class="counter">
+              <div class="likes" id="${e.show.id}"><i class="fa fa-thumbs-up" aria-hidden="true"></i> </div>
+              <div><i class="fa fa-comment" aria-hidden="true"></i></div>
+          </div>
         </div>
         `;
       }
