@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', san-serif;
+  font-family: "Poppins", san-serif;
 }
-
 
 ul {
   list-style: none;
@@ -21,7 +20,7 @@ header {
 header ul {
   list-style: none;
   display: flex;
-  gap: 10vw; 
+  gap: 10vw;
 }
 
 header ul li {
@@ -32,18 +31,14 @@ header ul li {
   margin: 1%;
   display: flex;
   flex-wrap: wrap;
-  gap: 2px; 
-   display: grid; 
+  gap: 2px;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-   
-
-
- 
 }
 
- .movie {
+.movie {
   width: 30vw;
-  height: 40vh; 
+  height: 40vh;
 }
 
 .movie img {
@@ -52,8 +47,8 @@ header ul li {
 }
 
 .counter {
-   display: flex;
-  gap: 10vw; 
+  display: flex;
+  gap: 10vw;
 }
 
 .fa-thumbs-up,
@@ -61,38 +56,29 @@ header ul li {
   background-color: #037e7e;
   border-radius: 0.2em;
   padding: 0.5em;
-} 
+}
 
-
-
-
-
-
-
-
-form{
+form {
   display: flex;
   flex-direction: column;
-  
+
   align-items: center;
   width: 100%;
   padding: 20px;
   gap: 20px;
 }
 
-.modalContainer{
-  display: none; 
+.modalContainer {
+  display: none;
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
   justify-content: center;
   align-items: center;
-
 }
 
-
-.popupModal{
+.popupModal {
   position: relative;
   width: 85%;
   height: 90%;
@@ -106,13 +92,14 @@ form{
 }
 
 .show-text {
-   width: 50%;
+  width: 50%;
 }
 
-.shows-title , .comment-title, .inputTitle{
+.shows-title,
+.comment-title,
+.inputTitle {
   text-align: center;
 }
-
 
 .close-btn {
   position: absolute;
@@ -120,4 +107,3 @@ form{
   right: 0;
   padding: 5px 10px;
 }
-

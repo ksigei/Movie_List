@@ -12,7 +12,7 @@ const displayPopup = () => {
   });
   addNewComment();
 };
-// close func
+
 const closePopup = () => {
   const modalContainer = document.querySelector('.modalContainer');
   const closeButton = document.querySelector('.close-btn');
