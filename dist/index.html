@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/84279998aa.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Movie List</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <header>
+      <ul>
+        <li>Logo</li>
+        <li>Home</li>
+        <li>Movies</li>
+        <li>About</li>
+      </ul>
+    </header>
+    <section>
+      <div class="movie_list"></div>
+
+      <div class="modalContainer">
+        <div class="popupModal">
+          <button type="button" class="close-btn" id="closeButton">
+            &times;
+          </button>
+          <div class="shows-image">
+            <img src="." class="movie-image" alt="show-image" />
+          </div>
+          <div class="show-text">
+            <div class="shows-title">
+              <h2 class="movie-title"></h2>
+            </div>
+            <div>
+              <p class="movie-summary"></p>
+            </div>
+          </div>
+
+          <div>
+            <div class="comment-title">
+              <h3 class="comments">Comments (0)</h3>
+            </div>
+            <ul class="comments-list">
+              
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="inputTitle">Add comments</h3>
+            <form class="form">
+              <input
+                class="input-name"
+                type="text"
+                placeholder="Your name"
+                required
+              />
+              <textarea
+                class="input-text"
+                rows="4"
+                placeholder="Your insights"
+                required
+              ></textarea>
+              <button type="submit" class="addComment-btn">
+                Add Comment
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h3>&COPY;2022 Movie List</h3>
+    </footer>
+  </body>
+</html>
