@@ -8,10 +8,10 @@ const displayLikes = async (id, p) => {
   likeAdd.forEach((like) => {
     if (like.item_id === id) {
       let likesName;
-      if(like.likes <= 1) {
-        likesName ='like'
+      if (like.likes <= 1) {
+        likesName = 'like';
       } else {
-        likesName = 'likes'
+        likesName = 'likes';
       }
       p.innerHTML = `${like.likes} ${likesName}`;
     }
