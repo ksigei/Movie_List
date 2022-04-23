@@ -7,9 +7,8 @@
 - Frameworks: N/A
 - Technologies used: Webpack, API
 
-### You can view it live [here](https://github.com/Estherstarr/Movie-List)
 
-### Watch our project presentation [here](#)
+### Watch our project presentation [here](https://youtu.be/jI4I3T1M0vU)
 
 
 ### Prerequisites
