@@ -14,7 +14,6 @@ const getAllLikes = async () => {
   return dataLikes;
 };
 
-
 const postComment = async (id, username, comment) => {
   const res = await fetch(`${involvmentUrl}${appID}/comments`, {
     method: 'POST',
@@ -40,4 +39,6 @@ const getComments = async (id) => {
   }
 };
 
-export { fetchShow, postComment, getComments, getAllLikes };
+export {
+  fetchShow, postComment, getComments, getAllLikes,
+};
