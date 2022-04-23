@@ -47,7 +47,11 @@ header ul li {
 
 .counter {
   display: flex;
-  gap: 10vw;
+  gap: 6vw;
+}
+
+button {
+  border: none;
 }
 
 .fa-thumbs-up,
