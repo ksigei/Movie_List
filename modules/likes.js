@@ -7,7 +7,13 @@ const displayLikes = async (id, p) => {
   const likeAdd = await getAllLikes();
   likeAdd.forEach((like) => {
     if (like.item_id === id) {
-      p.innerHTML = `${like.likes}`;
+      let likesName;
+      if(like.likes <= 1) {
+        likesName ='like'
+      } else {
+        likesName = 'likes'
+      }
+      p.innerHTML = `${like.likes} ${likesName}`;
     }
   });
 };
