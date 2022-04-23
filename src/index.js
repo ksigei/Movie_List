@@ -1,31 +1,51 @@
 import './style.css';
 import { displayPopup, closePopup } from '../modules/popup.js';
+import { displayLikes, addLikes } from '../modules/likes.js';
 
 const showApi = 'https://api.tvmaze.com/search/shows?q=girls';
-const movieContainer = document.querySelector('.movie_list');
+const show = document.querySelector('.movie_list');
 
-const fetchShows = async () => {
-  const res = await fetch(showApi);
-  const allShows = await res.json();
-
-  allShows.forEach((e) => {
-    const allMovies = document.createElement('div');
-    allMovies.className = 'movie';
-    if (e.show.image !== null) {
-      allMovies.innerHTML = `
-        <div>
-          <img src="${e.show.image.medium}" alt="Movie">
-          <p>Title: ${e.show.name}</p>
-          <div class="counter">
-              <div class="likes" id="${e.show.id}"><i class="fa fa-thumbs-up" aria-hidden="true"></i> </div>
-              <div><i class="fa fa-comment" aria-hidden="true"></i></div>
-          </div>
-        </div>
-        `;
+const displayShows = async () => {
+  const data = await fetch(showApi).then((response) => response.json());
+  data.forEach((element) => {
+    const showCard = document.createElement('div');
+    showCard.className = 'showCard';
+    let image;
+    if (element.show.image !== null) {
+        image = element.show.image.medium
+    } else {
+      image = 'https://via.placeholder.com/150'
     }
-    movieContainer.appendChild(allMovies);
+      showCard.innerHTML = `<div id="${element.score}">
+    <img class="img" src="${image}">
+    <div class="counter">
+    
+    <button><i class="fa fa-thumbs-up" aria-hidden="true" id=${element.show.id}></i></button>
+    <p class="likeShow" id=${element.show.id}></p>
+    
+    <button><i class="fa fa-comment" aria-hidden="true"></i></button>
+    </div>
+    </div>
+    `;
+    
+    show.appendChild(showCard);
   });
+
+  const likes = document.querySelectorAll('.fa-thumbs-up');
+  const likeShow = document.querySelectorAll('.likeShow');
+  likes.forEach((like) => {
+    like.addEventListener('click', async () => {
+      likeShow.forEach((p) => {
+        if (p.id === like.id) {
+          addLikes(like.id);
+          displayLikes(like.id, p);
+        }
+      });
+    });
+  });
+
+
   displayPopup();
   closePopup();
 };
-fetchShows();
+displayShows();
