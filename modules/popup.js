@@ -1,5 +1,5 @@
 import { fetchShow } from '../src/apiCall.js';
-import { showPopup, addNewComment } from './comment.js';
+import { showPopup, updateCommentPage, submitAComment } from './comment.js';
 
 const displayPopup = () => {
   const commentBtn = document.querySelectorAll('.fa-comment');
@@ -8,9 +8,10 @@ const displayPopup = () => {
       const { id } = btn.parentElement.previousElementSibling;
       const result = await fetchShow(id);
       showPopup(result);
+      updateCommentPage(id);
     });
   });
-  addNewComment();
+  submitAComment();
 };
 
 const closePopup = () => {

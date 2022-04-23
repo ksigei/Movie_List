@@ -18,24 +18,28 @@ const showPopup = (result) => {
   modalContainer.style.display = 'flex';
 };
 
-const addNewComment = () => {
-  const form = document.querySelector('.form');
+const updateCommentPage = async (id) => {
   const commentsCount = document.querySelector('.comments');
   const commentsList = document.querySelector('.comments-list');
+  const allComments = await getComments(id);
+  commentsList.innerHTML = '';
+  allComments.forEach((item) => {
+    commentsList.innerHTML
+      += `<li>${item.creation_date} ${item.username}: ${item.comment}</li>`;
+  });
+  commentsCount.textContent = `Comments (${commentsList.children.length})`;
+};
+
+const submitAComment = () => {
+  const form = document.querySelector('.form');
   const inputName = document.querySelector('.input-name');
   const inputText = document.querySelector('.input-text');
-
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     await postComment(form.id, inputName.value, inputText.value);
     form.reset();
-    const allComments = await getComments(form.id);
-    allComments.forEach((item) => {
-      commentsList.innerHTML
-        += `<li>${item.creation_date} ${item.username}: ${item.comment}</li>`;
-    });
-    commentsCount.textContent = `Comments (${commentsList.children.length})`;
+    updateCommentPage(form.id);
   });
 };
 
-export { showPopup, addNewComment };
+export { showPopup, submitAComment, updateCommentPage };
