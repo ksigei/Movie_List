@@ -18,6 +18,7 @@ const displayShows = async () => {
     }
     showCard.innerHTML = `<div id="${element.score}">
     <img class="img" src="${image}">
+    <p class="title">${element.show.name}</p>
     <div class="counter">
     
     <button><i class="fa fa-thumbs-up" aria-hidden="true" id=${element.show.id}></i></button>
