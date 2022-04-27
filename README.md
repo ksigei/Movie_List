@@ -28,7 +28,7 @@ To get a local copy up and running follow these simple example steps.
 - Open git bash on local computer
 - clone the repo with: 
 ```
-git clone  <https://github.com/Estherstarr/Movie-List.git>
+git clone  <https://github.com/ksigei/Movie_List.git>
 ```
 - run ```cd Movie-Database``` to enter the project folder
 - run ```npm i``` to install all dependencies
@@ -55,7 +55,7 @@ git clone  <https://github.com/Estherstarr/Movie-List.git>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Estherstarr/Movie-List/issues).
+Feel free to check the [issues page](https://github.com/ksigei/Movie_List/issues).
 
 
 ### Show your support
