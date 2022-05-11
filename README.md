@@ -8,6 +8,7 @@
 - Technologies used: Webpack, API
 
 
+### Live Demo [Live demo link](https://ksigei.github.io/Movie_List/)
 ### Watch our project presentation [here](https://youtu.be/jI4I3T1M0vU)
 
 
